@@ -3,11 +3,23 @@ package person;
 import person.consciousness.Knowledge;
 
 public class Student {
-    public Student(String name) {
-        //TODO: Implementation is needed
+    private String name;
+    private Knowledge knowledge;
+
+    public Student(String name, Knowledge knowledge) {
+        this.name = name;
+        this.knowledge = knowledge;
     }
 
-    public void setKnowledge(Knowledge knowledge) {
-        //TODO: Implementation is needed
+    public int getKnowledge() {
+        return knowledge.getLevel();
+    }
+
+    @Override
+    public String toString() {
+        return "Student " +
+                "name='" + name + '\'' +
+                ", knowledge=" + knowledge.getLevel() +
+                '}';
     }
 }
